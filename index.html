@@ -6,6 +6,9 @@
           Module.onRuntimeInitialized = async _ => {
             let tk = new verovio.toolkit();
             console.log("Verovio has loaded!");
+            tk.setOptions({
+              scale: 30
+            });
             
             fetch("https://www.verovio.org/examples/downloads/Schubert_Lindenbaum.mei")
               .then( (response) => response.text() )
