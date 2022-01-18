@@ -1,6 +1,13 @@
 <html>
   <head>
-    <script src="http://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script src="https://www.verovio.org/javascript/latest/verovio-toolkit-wasm.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+          Module.onRuntimeInitialized = async _ => {
+            let tk = new verovio.toolkit();
+          }
+      });
+    </script>
     
   </head>
   
